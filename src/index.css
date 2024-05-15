@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body, html{
+    background-image: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    color-scheme:light dark;
+}
+
+strong{
+    color: #63e;
+}
+
+
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+img{
+    mask-image: linear-gradient(
+        black 90%,
+        transparent
+    );
+}
+
+.bli{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name:show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
